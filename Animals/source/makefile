@@ -17,7 +17,7 @@
 #   ../bin/makeAnimals: etc
 #   and
 #   ../objects/makeAnimals.o: etc
-#   But using macros here instead of ../bin and ../objectsjx
+#   But use macros instead of ../bin and ../objects
 #
 #4) The link step will combine object files that are in the ../objects
 #   directory. The macro that defines a list of the object files needs
@@ -27,9 +27,10 @@
 #   For this to work, you will need to explicity provide a link step that
 #   causes the executable to be stored in the bin directory. 
 #
-#Note: Be sure to provide all of the same kinds of macros and targets
-#      that you did in the previous two problems. You can omit the help 
-#      target since that is in the top level makefile
+#Note: Be sure to provide all of the needed macros and targets.
+#      You can omit the help and clean targets since those are
+#      in the top level makefile. (Although, it doesn't hurt to have
+#      those in this makefile also.)
 #
 #Note: Don't define a macro name PATH. There is already an environment 
 #      variable with that name.  (Seriously, this introduces a weird bug.)
