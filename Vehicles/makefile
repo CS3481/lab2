@@ -15,7 +15,7 @@
 #4) Add suffix rule that specifies how to create a .o out of a .C file.
 #   It should use your CC and CFLAGS macros.
 #
-#5) Add sets of lines  in the makefile for each .o target. 
+#5) Add a line to the makefile for each .o target. 
 #   You'll need to look in the corresponding C file to
 #   see what .h files it includes. Those .h files (excluding the ones
 #   in angled brackets) will be the dependences. The header files

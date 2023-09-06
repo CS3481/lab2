@@ -13,12 +13,14 @@
 #   the help target lists all of the targets.
 #
 #4) Add suffix rule that specifies how to create a .o out of a .C file.
+#   See Introduction to Makefile document.
 #
 #5) Modify makefile to use the macros. (Use the TARGETS macro with the help
-#   target. @echo "$(MACRO)" outputs the value of the macro.)
+#   target. @echo "targets: $(TARGETS)" outputs the value of the macro.)
 #
 #6) Eliminate unnecessary commands and dependencies. (If the make utility can
 #   determine a dependence or a command then don't provide it.)
+#   See Introduction to Makefile document.
 #
 #Note: Remember to use tabs properly or the makefile won't work.
 #
