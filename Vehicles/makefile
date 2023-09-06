@@ -5,9 +5,10 @@
 #   The compiler is g++.  The compiler flags are -c -std=c++11 -Wall -g
 #
 #2) Add a macro for the object files that should be linked together
-#   to create the executable.
+#   to create the executable. There will be one object file (.o) for
+#   each source file (.C)
 #  
-#3) Add a macro for the targets. You'll have a makeVehicle target (the
+#3) Add a macro for the targets. You'll have a makeVehicles target (the
 #   executable), a target for each .o (one .o for each .C), a clean
 #   target, a run target, and a help target.
 #
@@ -16,18 +17,22 @@
 #
 #5) Add sets of lines  in the makefile for each .o target. 
 #   You'll need to look in the corresponding C file to
-#   see what .h files it includes.
+#   see what .h files it includes. Those .h files (excluding the ones
+#   in angled brackets) will be the dependences. The header files
+#   can go in any order in the list of dependences.  The .o target lines
+#   can go in any order in the makefile.
 #
 #6) Add the executable target to the makefile. Remember the executable
 #   is dependent upon the object (.o) files. Call the executable
-#   makeVehicles. (If you call is something else, then make won't be
+#   makeVehicles. (If you call it something else, then make won't be
 #   able to figure out the link step.)
 #
 #7) Add a run target. (See program 1 makefile as an example.) 
 #
 #8) Add a help target. (See program 1 makefile as an example.) Be
-#   sure to use your targets macro. It should be the first target
-#   in the makefile.
+#   sure to use your targets macro. The help target should be the 
+#   first target in the makefile.  (The remaining targets can be in
+#   any order.)
 #
 #9) Add a clean target.
 #

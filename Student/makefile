@@ -9,7 +9,8 @@
 #2) Add a macro for the object files that should be linked together
 #   to create the executable. Call it OBJS.
 #
-#3) Add a macro for the targets. Call it TARGETS.
+#3) Add a macro for the targets. Call it TARGETS. Note the echo below
+#   the help target lists all of the targets.
 #
 #4) Add suffix rule that specifies how to create a .o out of a .C file.
 #
@@ -24,6 +25,9 @@
 #Note: The @ before the echo command prevents make from displaying the
 #      command. It just displays the output of the echo
 #
+#Note: After you get it working, you can delete all of the
+#      instructions. 
+#
 #Define macros below this line.
 
 
@@ -31,7 +35,7 @@
 #help information is displayed.
 help:
 	@echo "to use makefile, type: make <target>"
-	@echo "targets: help, run, createStudent, createStudent.o, Student.o, clean"
+	@echo "targets: help run createStudent createStudent.o Student.o clean"
 	@echo "examples:"
 	@echo "to create executable and run code: make run"
 	@echo "to create executable: make createStudent"
@@ -54,4 +58,4 @@ Student.o: Student.C Student.h
 	g++ -c -std=c++11 -Wall -g Student.C
 
 clean:
-	rm -f *.o
+	rm -f *.o createStudent

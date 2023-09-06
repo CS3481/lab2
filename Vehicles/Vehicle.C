@@ -9,13 +9,6 @@ Vehicle::Vehicle(int p, int f, int m)
    mpg = m;
 }
 
-/*
-std::string Vehicle::getName()
-{
-   return "Vehicle";
-}
-*/
-
 int Vehicle::range()
 {
    return mpg * fuelCapacity;
