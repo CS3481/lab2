@@ -15,7 +15,7 @@ makeAnimals:
 
 run:
 	(cd $(SRC) && make ../$(BIN)/$(EXE))
-	(cd $(BIN) && $(EXE))
+	(cd $(BIN) && ./$(EXE))
 
 clean:
 	(cd $(BIN) && rm -f $(EXE))
